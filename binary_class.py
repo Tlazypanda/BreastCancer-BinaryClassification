@@ -21,7 +21,7 @@ def create_model():
     model.add(Dense(16, kernel_initializer='normal', activation='relu'))
      #addig dropout of 0.2 so only 80% of neurons used
     model.add(Dropout(0.2))
-    # Output layer with a binary classification (Democrat or Republican political party)
+    # Output layer with a binary classification (Benign or malignent)
     model.add(Dense(1, kernel_initializer='normal', activation='sigmoid'))
     # Compile model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
